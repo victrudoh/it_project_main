@@ -1,0 +1,47 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="container">
+
+        <h1 class="mt-4">Student List</h1>
+        <div class="table-responsive">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Department</th>
+                <!-- <th scope="col">Phone Number</th> -->
+                <!-- <th scope="col">Biographical Info</th> -->
+                <th scope="col">Email Address</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+                
+              <% var i = 1 %>
+
+                <% students.forEach((student)=>{%>
+
+              <tr>
+                <td><%= i++ %></td>
+                <td><%= student.name %></td>
+                <td><%= student.department %></td>
+                <!-- <td><%= student.phone %></td> -->
+                <!-- <td><%= student.bio %></td> -->
+                <td><%= student.email %></td>
+                <td>
+                  <a href="/students/view/<%= student.id %>"class="px-1">View</a>
+                  <a href="/students/edit/<%= student.id %>"class="px-1">Edit</a>
+                  <a href="/students/delete/<%= student.id %>"class="px-1">Delete</a>
+                </td>
+              </tr>
+
+              <% } )%>
+
+            </tbody>
+          </table>
+        </div>
+
+    </div>
+
+<%- include('partials/footer.ejs') %>

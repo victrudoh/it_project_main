@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %>
+
+  
+
+<div class="container" >
+  <input type="hidden" name="id" value="<%= student.id %>">
+    <div class="row row-cols-1 row-cols-md-2 offset-md-4 mb-3 mt-5 text-center">
+        <div class="col bg-dark">
+          <div class="card mb-4 mt-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-bold"><%= student.name %></h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li><h5><%= student.department %></h5></li>
+                <li><h5><%= student.phone %></h5></li>
+                <li><h6><%= student.email %></h6></li>
+                <li><%= student.bio %></li>
+              </ul>
+              <a href="/students" class="w-100 btn btn-lg btn-primary"> Back </a>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+  <%- include('partials/footer.ejs') %>

@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+
+
+<div class="container" >
+  <form  method="POST" action="/gallery/viewPost">
+    <input type="hidden" name="id" value="<%= post.id %>">
+
+    <img src="<%= post.media %>" class="mt-4" style="width: 100vh;  height: 60vh; margin:auto; display:block;" alt="No media">
+
+    <div class="centralize text-center" style="display: block; justify-content: center; align-items: center;">
+      <h1 class="card-title pricing-card-title"><%= post.caption %></h1>
+      <h3><small class="text-muted fw-normal"><%= post.description %></small></h3><br>
+      <h4><small class="text-muted fw-lighter">~<%= post.author == '' ? 'Anonymous' : post.author %>~</small></h4><br>
+      <a href="/gallery" class="customButton w-50 btn btn-lg btn-outline-primary mb-2"> Back </a><br>
+      <!-- <a href="/gallery" class="customButton w-50 btn btn-lg btn-outline-primary mt-4 mb-5"> Delete </a><br> -->
+      <button type="submit" class="customButton w-50 btn btn-lg btn-outline-primary mt-2 mb-4" > Delete </button>
+    </div>
+  </form>
+</div>
+
+
+<%- include('partials/footer.ejs') %>

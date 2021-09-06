@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container">
+
+    <div class="mt-5">
+
+      <div class="row">
+
+        <div class="card col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3 shadow rounded bg-secondary">
+
+          <main class="form-signin">
+            <form method="POST" action="/gallery/newpost">
+                    <h3 class="mt-4 mb-4 text-white">Add to Gallery...</h3>
+                    <div class="form-floating">
+                        <input name="media" type="text" class="form-control mb-1 mt-4" id="media" placeholder="">
+                        <label for="media" class="text-muted"><h5>Enter media here</h5></label>
+                        <div id="media"><h6>Paste your media link in the above field</h6></div>
+                    </div>
+                    <div class="form-floating">
+                        <input name="caption" type="text" class="form-control mb-1 mt-4" id="caption" placeholder="">
+                        <label for="caption" class="text-muted"><h5>Add a caption...</h5></label>
+                        <div id="caption"><h6>Captions are like topics... kind of, LOL</h6></div>
+                    </div>
+                    <div class="form-floating">
+                        <input name="description" type="text" class="form-control mb-1 mt-4" id="description" placeholder="">
+                        <label for="description" class="text-muted"><h5>Description</h5></label>
+                        <div id="description"><h6>you can type your long explanations here...</h6></div>
+                    </div>
+                    <div class="form-floating">
+                        <input name="author" type="text" class="form-control mb-1 mt-4" id="author" placeholder="">
+                        <label for="author" class="text-muted"><h5>nickname</h5></label>
+                        <div id="author"><h6>This is just a display name</h6></div>
+                    </div>
+          
+              <button class="w-100 btn btn-lg btn-primary mt-4 mb-2" type="submit">Upload</button>
+              <a href="/gallery" class=" w-100 btn btn-lg btn-primary mt-2 mb-2" type="submit">Back</a>
+              <p class="mt-3 mb-2 text-white">&copy; 2017–2021</p>
+            </form>
+          </main>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<%- include('partials/footer.ejs') %>

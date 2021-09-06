@@ -1,0 +1,155 @@
+body {
+    background-color: whitesmoke;
+    /* perspective: 1000px; */
+}
+
+h1 {
+    color: #db460b;
+}
+
+
+/* *****FAB***** */
+.FAB {
+    background-color: #db460b;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: #db460b;
+    border: none;
+    outline: none;
+    color: #212529;
+    font-size: 36px;
+    /* text-align: center; */
+    justify-content: center;
+    float: right;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.FAB a {
+    text-decoration: none;
+    color: #212529;
+}
+
+.FAB:hover {
+    background-color: #212529;
+    /* color: #db460b; */
+}
+
+.FAB a:hover {
+    color: #db460b;
+}
+
+/* .FAB:focus {
+    transform: scale(1.1);
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+} */
+
+
+/* G A L L E R Y */
+/* *****COVER PHOTO***** */
+.galleryCoverImg {
+    
+    background-image: url('/images/wallpaperflare.com_wallpaper-1.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    color: #db460b;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    justify-content: center;
+    height: 80vh; 
+    padding: 70px;
+    padding-top: 130px;
+    text-align: center;
+}
+
+.textGradient {
+    background-clip: text;
+    /* background-image: linear-gradient(45deg, #98eea7, #384ea7); */
+    background-image: linear-gradient(45deg, #f04c00, #0084a5);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+/****GALLERY CARDS ****/
+/* CARD IMAGE */
+.perspective {
+    perspective: 1000px;
+    
+}
+
+.onFocus{
+    transition: transform 1s;
+}
+
+.onFocus:hover {
+    transform: translateZ(80px);
+}
+
+
+/* SHOW ON HOVER */
+.showOnHover h3 {
+    display: none;
+}
+
+.showOnHover:hover h3 {
+    display: inline-block;
+}
+
+.showOnHover h4 {
+    display: none;
+}
+
+.showOnHover:hover h4 {
+    display: inline-block;
+}
+
+/* CARD BUTTON */
+.showOnHover a {
+    /* background: rgb(15, 106, 209); */
+    background: #db460b;
+    border: 2px solid #db460b;
+    border-radius: 10px;
+    color: whitesmoke;
+    display: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 2px 16px;
+    text-decoration: none;
+}
+
+/* what happens when you hover over link */
+.showOnHover a:hover {
+    background: white;
+    border: 2px solid #db460b;
+    color: #db460b;
+}
+
+/* what happens to link when you hover over card */
+.showOnHover:hover a {
+    display: inline-block;
+
+}
+
+
+/* M I S C */
+.customButton {
+    background: #db460b;
+    border: 2px solid #db460b;
+    color: whitesmoke;
+}
+
+.customButton:hover {
+    background: white;
+    border: 2px solid #db460b;
+    color: #db460b;
+}
+
